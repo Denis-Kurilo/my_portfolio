@@ -1,0 +1,46 @@
+.wrap-frontend, .wrap-backend, .wrap-workflow{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	margin-bottom: 60/@em;
+}
+.progress-front, .progress-back, .progress-workflow{
+	width: 100%;
+	display: flex;
+	height: 30/@em;
+	padding-top: 30/@em;
+	padding-bottom: 60/@em;
+	
+}
+.progress-front .progressBar, 
+.progress-back .progressBar,
+.progress-workflow .progressBar{
+	width: 15%;
+}
+
+.progress-front  .progressBar .chart,
+.progress-back  .progressBar .chart,
+.progress-workflow  .progressBar .chart{
+	position: relative;
+	width: 120px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 20/@em;
+	font-weight: bold;
+	
+}
+
+.progress-front .progressBar canvas,
+.progress-back .progressBar canvas,
+.progress-workflow .progressBar canvas{
+	position: absolute;
+	top: -40px; 
+	left: 5px;
+}
+
+
+
+
+
+	
+	

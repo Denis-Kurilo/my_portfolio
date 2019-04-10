@@ -1,0 +1,20 @@
+//- Разные миксины по одному, которые понадобятся. 
+
+mixin mouse_scroll( )
+	a.mouse_scroll.mouse_scroll__mPS2id#arrow-top(href="#head", rel='m_PageScroll2id')
+		.mouse_scroll
+			span.m_scroll_arrows.unu
+			span.m_scroll_arrows.doi
+			span.m_scroll_arrows.trei
+
+
+mixin button(text, link)
+	.wrap-brn
+		.button.animated.infinite.pulse
+			a.popup-link(href = link)
+				| #{text}
+
+mixin button-pholio(text, link)
+	.button-pholio.animated.infinite.pulse
+		a.popup-link(href = link)
+			| #{text}

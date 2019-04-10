@@ -1,0 +1,124 @@
+.portfolio-item__image__hover{ 
+	overflow: hidden;
+	cursor: pointer;
+	background-color: #000;
+    border-radius: 10px 10px 0 0;
+	
+	img{
+		width: 100%;
+		height: 100%;
+		transition: .5s;
+	}
+}
+.portfolio-item__img:hover .portfolio-item__image__hover img{
+	transform: rotate(-10deg) scale(1.3); 
+	filter: blur(1px);
+	opacity: .5;
+}
+.blockText{
+	// width: 100%;
+	height: 80%;
+	position: absolute;
+	top: 25px;
+	left: 25px;
+	right: 25px;
+	bottom: 25px;
+	
+	@media only screen and (min-width : 480px) {
+		width: 300/@em;
+		height: 200/@em;
+	}
+}
+.hover-text{
+	color: #FFF;
+	font-size: 18/@em;
+	padding: 0 20/@em;
+	font-family: 'Roboto Slab', serif;
+	opacity: 0;
+	position: relative;
+	.transition (0.5s);
+}
+.hover-desc{
+	font-size: 70/@em;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 15/@em;
+	padding-bottom: 15/@em;
+	
+	@media only screen and (min-width : 480px) {
+		font-size: 22/@em;
+	}
+}
+
+.hover-text p{
+	position: absolute;
+	top: 380px;
+	border-left: 4px solid @portfolio;
+	padding-left: 10/@em;
+	text-align: left;
+	font-size: 60px;
+	
+	@media only screen and (min-width : 480px) {
+		top: 100px;
+		font-size: inherit;
+	}
+}
+
+.viewing a{
+	font-size: 70px;
+	color: #fff;
+	margin-top: 40px;
+	position: absolute;
+	top: 70%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+	z-index: 10;
+	 
+	@media only screen and (min-width : 480px) {
+		margin-top: 30px;
+		font-size: 20px;
+	}
+}
+
+.blockText::before,
+.blockText::after{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	.transition (0.5s);
+}
+
+.blockText::before{
+	border-top: 1px solid @portfolio;
+	border-bottom: 1px solid @portfolio;
+    transform: scale(0,1); // X
+}
+
+.blockText::after{
+	border-left: 1px solid @portfolio;
+	border-right: 1px solid @portfolio;
+	transform: scale(1,0); // Y
+}
+
+.portfolio-item__title{
+	font-size: 50/@em;
+	padding-top: 5px;
+	padding-bottom: 5/@em;
+	letter-spacing: 1px;
+	
+	@media only screen and (min-width : 480px) {
+		font-size: 25/@em;
+	}
+}
+
+.portfolio-item__image__hover:hover .blockText::before,
+.portfolio-item__image__hover:hover .blockText::after{
+    transform: scale(1,1);
+}
+
+.portfolio-item__image__hover:hover .hover-text{
+	opacity: 1;
+}

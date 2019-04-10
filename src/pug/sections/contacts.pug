@@ -1,0 +1,51 @@
+section.contacts.section#contacts
+	.container-fluid
+		h2.heading-2.heading-2--color Остались вопросы?
+		.wrap-contacts
+			.row
+				.col-md-6
+					.contact
+						.contact__info
+							span.phone 
+								<i class="fas fa-mobile-alt"></i> 8(978) 805-98-69
+							span.email 
+								<i class="far fa-envelope"></i> 
+									a(href='mailto:webprogram2017@mail.ru')(target="_blank") webprogram2017@mail.ru
+							span.tg 
+								<i class="fab fa-telegram-plane"></i> 
+									a(href='https://t.me/Denis_KDB')(target="_blank") Denis_KDB
+							.social.social--size
+								a(href='https://vk.com/id8356952')(target="_blank")
+									i.fab.fa-vk
+								a(href='https://github.com/den2018?tab=repositories')(target="_blank")
+									i.fab.fa-github
+								a(href='https://www.instagram.com/kurilo__denis/')(target="_blank")
+									i.fab.fa-instagram
+								a(href='https://t.me/Denis_KDB')(target="_blank")
+									i.fab.fa-telegram-plane
+				.col-md-6
+					.contacts-form
+						form(id="contact-form" class="contact-form")
+
+							// Hidden Required Fields
+							input(type='hidden', name='project_name', value='Мой персональный сайт')
+							input(type='hidden', name='admin_from', value='admin@student2018.zzz.com.ua')
+							input(type='hidden', name='admin_email', value='kdb2015@mail.ru')
+							input(type='hidden', name='form_subject', value='Сообщение с сайта')
+							// //Hidden Required Fields
+
+							input(class="contact-form__input-name" name="names" type="text" placeholder="Введите имя *")
+							.wrap-eml-phoe
+								input(class="contact-form__input-email" name="email" type="text" placeholder="Введите email *")
+								input(class="contact-form__input-phone contact-form__input-phone--maskedinput" name="phone" type="text" placeholder="Введите телефон")
+							textarea(class="contact-form__textarea" name="message" placeholder="Задайте вопрос?")
+							label.text-check Вы подтверждаете обработку данных
+								input(class="contact-form__input-checkbox contact-form__input-checkbox--style-bottom" name="checkbox" type="checkbox" id="checkbox" placeholder="Введите номер телефона")
+
+							.wrap-btn
+								input(type="submit" class="btn" value="Отправить")
+						#answer
+
+							
+
+

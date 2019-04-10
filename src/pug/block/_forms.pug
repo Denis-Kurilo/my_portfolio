@@ -1,0 +1,60 @@
+#order.mfp-hide
+	.decor-form
+	form(id="order-forms" class="contact-form")
+		h4.form__title 
+			<i class="far fa-hand-point-right animated infinite wobble"></i>Вы решили заказать сайт? Заполните форму.
+		.wrap-inputText
+			.inputTextLeft
+				label(for="name" class="contact-form__label") Введите Ваше имя 
+					span.star *
+				input(type="text" class="contact-form__input" name="names" placeholder="Ваше имя")
+
+				label(for="email" class="contact-form__label") Введите Ваш e-mail 
+					span.star *
+				input(type="text" class="contact-form__input" name="email" placeholder="Ваш e-mail")
+			.inputTextRight
+				label(for="phone" class="contact-form__label") Контактный телефон 
+					span.star *
+				input(type="text" class="contact-form__input contact-form__input-phone--maskedinput" name="phone" placeholder="Ваш телефон")
+				
+				label(for="service" class="contact-form__label") Выберите услугу 
+					span.star *
+				select(name="Заказ сайта" class="contact-form__select" id="service")
+					option(disabled selected) Выберите
+					option() Landing page
+					option() Сайт визитка 
+					option() Промо сайт 
+					option() Тематический сайт  
+					option() Персональный сайт  
+					option() Другое(указать в описании)  
+
+		.wrap-contact-form__radio
+			.wrap-contact-form__radioL
+				label.contact-form__radio-title Сроки на разработку
+					
+				input(type="radio" value="Нужно срочно" class="contact-form__radio" id="period" name="Deadline") 
+				label(class="contact-form__radio-size" for="period") Нужно срочно
+				
+				input(type="radio" value="Нет" class="contact-form__radio" id="period2" name="Deadline") 
+				label(class="contact-form__radio-size" for="period2") Я не спешу
+			.wrap-contact-form__radioR
+				label.contact-form__radio-title У Вас есть техническое задание?
+					
+				input(type="radio" value="Да" class="contact-form__radio" id="tz1" name="Technical-specifications") 
+				label(class="contact-form__radio-size" for="tz1") Да
+				
+				input(type="radio" value="Нет" class="contact-form__radio" id="tz2" name="Technical-specifications") 
+				label(class="contact-form__radio-size" for="tz2") Нет
+		label.mt-30(for="textarea" class="contact-form__textA-desc") Описание проекта, требованя, особые пожелания, бюджет 
+			span.star *
+		textarea(class="contact-form__textA" name="message" id="textarea" placeholder="Задайте вопрос?")
+		label.text-check.text-check--style Вы подтверждаете обработку данных
+			input(class="contact-form__input-checkbox contact-form__input-checkbox--style" name="checkbox" type="checkbox" id="checkbox" placeholder="Введите номер телефона")
+
+		
+		.wrap-btn
+			input(type="submit" class="btn" value="Отправить")
+	#answer2
+
+
+				

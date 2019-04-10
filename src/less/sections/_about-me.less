@@ -1,0 +1,51 @@
+.about.section{
+	width: 100%;
+	background-color: @bgBlock;
+}
+.about{
+	margin-top: 90px;
+	position: relative;
+}
+	
+.wrap-section{
+	margin-top: 70/@em;
+	margin-bottom: 70/@em;
+}
+
+.about-foto{
+	width: 400/@em;
+	height: 357/@em;
+	background-color: #fff;
+	border: 3px dotted #5C1F1D;
+    border-radius: 10/@em;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    
+    @media only screen and (min-width : 768px) {
+   	 	margin-right: 0;
+   	 	margin-bottom: 0;
+	}
+    
+    img{
+    	width: 393/@em;
+		height: 350/@em;
+		position: absolute;
+		bottom: -20/@em;
+		left: -20/@em;
+        border-radius: 10/@em;
+        border: 1px solid rgba(255,255,255, 0.9);
+        box-shadow: 10px 10px 20px 2px rgba(68,23,21, 0.9);
+    }
+}
+
+.about-desc{
+	border: 1px dotted #000;
+	font-weight: bold;
+	padding-left: 10px;
+	padding: 20px;
+	span{
+		font-weight: normal;
+	}
+}
