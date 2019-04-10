@@ -6,10 +6,9 @@
 	top: 50%;
 	left: 50%;
     transform: translateX(-50%);
+    z-index: -1;
     
-    @media only screen and (min-width : 480px) {
-		width: 50%;
-	}
+    @media only screen and (min-width : 480px) {width: 50%;}
     
 	@media only screen and (min-width : 768px) {
 		width: auto;
@@ -34,14 +33,9 @@
 		.transition(0.3s);
 		font-family: 'Roboto Slab', serif;
 		
-		@media only screen and (min-width : 480px) {
-			font-size: 45/@em;
-		}
+		@media only screen and (min-width : 480px) {font-size: 45/@em;}
 		
-		@media only screen and (min-width : 768px) {
-			font-size: 25/@em;
-		}
-		
+		@media only screen and (min-width : 768px) {font-size: 25/@em;}
 		
 		&:hover, &focus{
 			border-radius: 5/@em;
@@ -58,9 +52,7 @@
 	.btn{
 		font-size: 30px;
 		
-		@media only screen and (min-width : 768px) {
-			font-size: 25px;
-		}
+		@media only screen and (min-width : 768px) {font-size: 25px;}
 	}
 }
 .button-pholio{
@@ -86,11 +78,8 @@
 			background-color: #fff;
 			border: 2px solid @button-header;
 			color: @button-header;
-			
 		}
 	}
-	
-	
 }
 
 

@@ -195,14 +195,58 @@ $('.popup-link').magnificPopup({
    
 });
 
-//mobile nav
-$('.navigation__toggle').on('click', function(e){
-  e.preventDefault();
-  $('.logo').toggleClass('logo--mobile-open');
-  $('.nav__list').toggleClass('nav__list--open');
-  //$('.logo').toggleClass('logo--mobile-open').fadeToggle(3000);
-})
+var navToggleButton = $('.navigation__toggle');
+var navToggleIcon = $('.navigation__toggle .fa');
+var navBlock = $('.nav__list');
+var navBlockOpen = 'navigation__list--open';
+var menu = $('.nav ul');
 
+var navLink = $('.nav__list a');
+var iconNav = 'fa-bars';
+var iconClose = 'fa-times';
+
+  // Мобильная навигация
+
+  navToggleButton.on('click', function(e){
+    e.preventDefault();
+    navBlock.toggleClass(navBlockOpen);
+
+    if ( navToggleIcon.hasClass(iconNav) ){
+      navToggleIcon.removeClass(iconNav);
+      navToggleIcon.addClass(iconClose);
+
+    } else {
+      navToggleIcon.removeClass(iconClose);
+      navToggleIcon.addClass(iconNav);
+    } 
+$('.logo').toggleClass('logo--mobile-open');
+
+
+    if(menu.hasClass('navigation__list--open')){
+      $('body').css('overflow', 'hidden')
+    }else{
+      $('body').css('overflow', 'visible')
+    }
+  })
+
+ 
+
+
+navLink.on('click', function(){
+
+    if ( navBlock.hasClass(navBlockOpen) ) {
+      if ( navToggleIcon.hasClass(iconNav) ){
+        navToggleIcon.removeClass(iconNav);
+        navToggleIcon.addClass(iconClose);
+      } else {
+        navToggleIcon.removeClass(iconClose);
+        navToggleIcon.addClass(iconNav);
+      }
+    }
+
+    navBlock.removeClass(navBlockOpen);
+    
+  })
 
 //Animate arrow-top
 $(function (){
