@@ -7,7 +7,8 @@ section.contacts.section#contacts
 					.contact
 						.contact__info
 							span.phone 
-								<i class="fas fa-mobile-alt"></i> 8(978) 805-98-69
+								<i class="fas fa-mobile-alt"></i> 
+									a(href="tel:89788059869") 8(978) 805-98-69
 							span.email 
 								<i class="far fa-envelope"></i> 
 									a(href='mailto:webprogram2017@mail.ru')(target="_blank") webprogram2017@mail.ru
@@ -40,7 +41,7 @@ section.contacts.section#contacts
 								input(class="contact-form__input-phone contact-form__input-phone--maskedinput" name="phone" type="text" placeholder="Введите телефон")
 							textarea(class="contact-form__textarea" name="message" placeholder="Задайте вопрос?")
 							label.text-check Вы подтверждаете обработку данных
-								input(class="contact-form__input-checkbox contact-form__input-checkbox--style-bottom" name="checkbox" type="checkbox" id="checkbox" placeholder="Введите номер телефона")
+								input(class="contact-form__input-checkbox contact-form__input-checkbox--style-bottom contact-form__input-phone--maskedinput" name="checkbox" type="checkbox" id="checkbox" placeholder="Введите номер телефона")
 
 							.wrap-btn
 								input(type="submit" class="btn" value="Отправить")

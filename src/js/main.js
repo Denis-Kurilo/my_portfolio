@@ -45,8 +45,8 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
       // Функция если все прошло успешно
       success: function(html){
        $("input[type=text], textarea").val("");
-        //$('#answer').html(html).slideUp(5000);
-        $('#answer').html(html);
+        $('#answer').html(html).slideUp(5000);
+        //$('#answer').html(html);
       }
     });
 
@@ -98,8 +98,8 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
       // Функция если все прошло успешно
       success: function(html){
        $("input[type=text], textarea").val("");
-        //$('#answer').html(html).slideUp(5000);
-        $('#answer2').html(html);
+        $('#answer').html(html).slideUp(5000);
+        //$('#answer2').html(html);
       }
     });
 
@@ -108,22 +108,22 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
   }
 
 //typed	
-var typed = new Typed(".hero-typed-text", {
-  	strings: [
-  	"низкие цены.",
-  	 "самые оптимальные сроки разработки.",
-  	 "чистый код и адаптивная верстка.",
-  	 "2 месяца бесплатной техподдержки."
-  	 ],
-  	typeSpeed: 80,
-  	backSpeed: 40,
-  	loop: true
-});	
+  var typed = new Typed(".hero-typed-text", {
+    	strings: [
+    	"низкие цены.",
+    	 "самые оптимальные сроки разработки.",
+    	 "чистый код и адаптивная верстка.",
+    	 "2 месяца бесплатной техподдержки."
+    	 ],
+    	typeSpeed: 80,
+    	backSpeed: 40,
+    	loop: true
+  });	
 
 //slide2id - плавная прокрутка по ссылкам внутри страницы
-$("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
-    highlightSelector:"nav a"
-});
+  $("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
+      highlightSelector:"nav a"
+  });
 
   // MixItUp
 $('#folio').mixItUp({
@@ -191,11 +191,58 @@ wow = new WOW(
   wow.init();
 
 //popup
-$('.popup-link').magnificPopup({
-   
-});
+  $('.popup-link').magnificPopup({
+     
+  });
 
+
+// Мобильная навигация
 var navToggleButton = $('.navigation__toggle');
+var navToggleIcon = $('.navigation__toggle .fas');
+var navBlock = $('.nav__list');
+var navBlockLogo = $('.logo');
+var navLink = $('.nav__list a');
+var navBlockOpen = 'navigation__list--open';
+var navBlockOpenLogo = 'logo--mobile-open';
+var iconNavOpen = 'fa-bars';
+var iconNavClose = 'fa-times';
+
+navToggleButton.on('click', function(e){
+  e.preventDefault();
+  navBlock.toggleClass(navBlockOpen);
+  navBlockLogo.toggleClass(navBlockOpenLogo);
+
+
+//replacing-icon
+  if(navToggleIcon.hasClass(iconNavOpen) ){
+    navToggleIcon.removeClass(iconNavOpen);
+    navToggleIcon.addClass(iconNavClose);
+  }else{
+    navToggleIcon.addClass(iconNavOpen);
+    navToggleIcon.removeClass(iconNavClose);
+  }
+})
+navLink.on('click', function(){
+  navBlock.removeClass(navBlockOpen);
+  navBlockLogo.removeClass(navBlockOpenLogo);
+
+//replacing-icon
+  if(navToggleIcon.hasClass(iconNavOpen) ){
+    navToggleIcon.removeClass(iconNavOpen);
+    navToggleIcon.addClass(iconNavClose);
+  }else{
+    navToggleIcon.addClass(iconNavOpen);
+    navToggleIcon.removeClass(iconNavClose);
+  }
+})
+
+
+
+
+
+
+
+/*var navToggleButton = $('.navigation__toggle');
 var navToggleIcon = $('.navigation__toggle .fa');
 var navBlock = $('.nav__list');
 var navBlockOpen = 'navigation__list--open';
@@ -204,8 +251,6 @@ var menu = $('.nav ul');
 var navLink = $('.nav__list a');
 var iconNav = 'fa-bars';
 var iconClose = 'fa-times';
-
-  // Мобильная навигация
 
   navToggleButton.on('click', function(e){
     e.preventDefault();
@@ -246,7 +291,7 @@ navLink.on('click', function(){
 
     navBlock.removeClass(navBlockOpen);
     
-  })
+  })*/
 
 //Animate arrow-top
 $(function (){
