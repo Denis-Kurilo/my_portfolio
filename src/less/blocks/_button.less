@@ -70,9 +70,23 @@
         border-radius: 10px;
 		color: #fff;
 		text-decoration: none;
-		font-size: 25px;
+		font-size: 60px;
 		.transition(0.3s);
 		font-family: 'Roboto Slab', serif;
+	
+		@media only screen and (min-width : 480px) {
+			font-size: 50px;
+		}
+
+		@media screen and (min-width:768px){
+			font-size: 35px;
+		}
+		
+
+		@media only screen and (min-width : 1200px) {
+			font-size: 25px;
+		}
+
 			
 		&:hover, &:focus{
 			background-color: #fff;
@@ -81,8 +95,3 @@
 		}
 	}
 }
-
-
-
-
-

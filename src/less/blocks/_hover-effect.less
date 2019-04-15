@@ -22,6 +22,7 @@
 	left: 25px;
 	right: 25px;
 	bottom: 25px;
+	z-index: 0;
 	
 	@media only screen and (min-width : 480px) {
 		width: 300/@em;
@@ -35,14 +36,28 @@
 	font-family: 'Roboto Slab', serif;
 	opacity: 0;
 	position: relative;
+	z-index: 1;
 	.transition (0.5s);
+	
+	a{
+		color: #FFF;
+		text-decoration: none;
+	}
 }
 .hover-desc{
 	font-size: 70/@em;
 	font-weight: bold;
 	text-align: center;
 	padding-top: 15/@em;
-	padding-bottom: 15/@em;
+	margin-bottom: 15/@em;
+	
+	&:hover{
+		border-bottom: none;
+		
+		@media only screen and (min-width : 768px) {
+			border-bottom: 1px solid @portfolio;
+	}
+	}
 	
 	@media only screen and (min-width : 480px) {font-size: 22/@em;}
 }
@@ -51,9 +66,12 @@
 	position: absolute;
 	top: 380px;
 	border-left: 4px solid @portfolio;
-	padding-left: 10/@em;
+	padding-left: 5/@em;
 	text-align: left;
 	font-size: 60px;
+	margin: 0;
+	margin-top: 20px;
+	margin-left: -10px;
 	
 	@media only screen and (min-width : 480px) {
 		top: 100px;
@@ -64,9 +82,8 @@
 .viewing a{
 	font-size: 70px;
 	color: #fff;
-	margin-top: 40px;
 	position: absolute;
-	top: 70%;
+	top: 50px;
 	left: 50%;
     transform: translate(-50%, -50%);
 	z-index: 10;
@@ -74,6 +91,10 @@
 	@media only screen and (min-width : 480px) {
 		margin-top: 30px;
 		font-size: 20px;
+		
+		&:hover{
+		color: #FFF;
+	}
 	}
 }
 
@@ -113,3 +134,5 @@
 .portfolio-item__image__hover:hover .blockText::after{transform: scale(1,1);}
 
 .portfolio-item__image__hover:hover .hover-text{opacity: 1;}
+
+.portfolio-item__image__hover:hover .hover-desc a {color: @portfolio;}

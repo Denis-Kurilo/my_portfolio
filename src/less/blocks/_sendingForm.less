@@ -3,6 +3,12 @@
 #order{
 	width: 100%;
 	background-color: #FFF;
+	position: absolute;
+	top: -50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin-left: auto;
+	margin-right: auto;
 	//margin-left: auto;
 	//margin-right: auto;
 	padding: 20px;
@@ -13,13 +19,28 @@
     //margin-top: 200px;
     
     @media only screen and (min-width : 768px) {
-		margin-top: auto;
+		//margin-top: auto;
 		width: 700px;
-		position: absolute;
-	    top: 0px;
+		
+	    top: 0vh;
 	    left: 50%;
-	    transform: translate(-50%, -50%);
+	    transform: translate(-50%, -100%);
 	}
+
+	 @media only screen and (min-width : 1200px) {
+		//margin-top: auto;
+		// width: 700px;
+		position: absolute;
+		top: -50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.mfp-bg{
+	position: relative;
 }
 
 #order.order1{

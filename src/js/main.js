@@ -214,15 +214,17 @@ navToggleButton.on('click', function(e){
 
 
 //replacing-icon
-  if(navToggleIcon.hasClass(iconNavOpen) ){
+ if(navToggleIcon.hasClass(iconNavOpen) ){
     navToggleIcon.removeClass(iconNavOpen);
     navToggleIcon.addClass(iconNavClose);
+    navBlockLogo.addClass(navBlockOpenLogo);
   }else{
     navToggleIcon.addClass(iconNavOpen);
     navToggleIcon.removeClass(iconNavClose);
+    navBlockLogo.removeClass(navBlockOpenLogo);
   }
 })
-navLink.on('click', function(){
+ navLink.on('click', function(){
   navBlock.removeClass(navBlockOpen);
   navBlockLogo.removeClass(navBlockOpenLogo);
 
@@ -235,6 +237,20 @@ navLink.on('click', function(){
     navToggleIcon.removeClass(iconNavClose);
   }
 })
+
+navBlockLogo.on('click', function(){
+  navBlock.removeClass(navBlockOpen);
+  navBlockLogo.toggleClass(navBlockOpenLogo);
+
+  if(navToggleIcon.hasClass(iconNavOpen) ){
+    navToggleIcon.removeClass(iconNavOpen);
+    navToggleIcon.addClass(iconNavClose);
+  }else{
+    navToggleIcon.addClass(iconNavOpen);
+    navToggleIcon.removeClass(iconNavClose);
+  }
+})
+
 
 
 
