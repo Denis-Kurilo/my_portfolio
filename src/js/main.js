@@ -108,7 +108,7 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
   }
 
 //typed	
-  var typed = new Typed(".hero-typed-text", {
+  /*var typed = new Typed(".hero-typed-text", {
     	strings: [
     	"низкие цены.",
     	 "самые оптимальные сроки разработки.",
@@ -118,7 +118,7 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
     	typeSpeed: 80,
     	backSpeed: 40,
     	loop: true
-  });	
+  });	*/
 
 //slide2id - плавная прокрутка по ссылкам внутри страницы
   $("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
@@ -327,6 +327,28 @@ $(function (){
     return false;
   }); 
 });
+
+
+//Прижать footer 
+(function(){
+
+    footer();
+
+    $(window).resize(function() {
+      footer();
+    });
+
+    function footer() {
+      var docHeight = $(window).height(),
+        footerHeight = $('footer').outerHeight(),
+        footerTop = $('footer').position().top + footerHeight;
+
+      if (footerTop < docHeight) {
+        $('footer').css('margin-top', (docHeight - footerTop) + 'px');
+      }
+    }
+
+  })();
 
 
 });
