@@ -351,4 +351,10 @@ $(function (){
   })();
 
 
+//fancybox
+$(".galeryWrok a").fancybox({
+  minWidth: 5000
+});
+
+
 });
