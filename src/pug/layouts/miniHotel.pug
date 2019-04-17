@@ -1,0 +1,25 @@
+include ../mixins/_mixins.pug
+<!DOCTYPE html>
+html(lang="ru")
+
+	head
+		include _head.pug
+	body(class=pageClass)
+		//[if lt IE 8]
+		//p Вы используете #[strong устаревшую] версию браузера. Пожалуйста #[a(href="http://browsehappy.com/")] обновите свой браузер  
+		//[endif]
+		.all-wrapper
+			include ../block/_navigation.pug
+			include ../sections/miniHotel.pug
+
+			block content
+				
+			
+			include ../sections/footer.pug
+
+			include _scripts.pug
+			
+
+
+
+	
