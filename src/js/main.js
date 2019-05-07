@@ -1,6 +1,4 @@
 $(document).ready(function() {
-// maskedinput 
-$(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
 
 //validate
   $('#contact-form').validate({
@@ -39,13 +37,13 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
     // Формируем ajax запрос
     $.ajax({
       type: "POST", // Тип запроса - POST
-      url: "../src/php/mail.php", // Куда отправляем запрос
+      url: "../src/php/order.php", // Куда отправляем запрос
       data: string, // Какие даные отправляем, в данном случае отправляем переменную string
       
       // Функция если все прошло успешно
       success: function(html){
        $("input[type=text], textarea").val("");
-        $('#answer').html(html).slideUp(5000);
+        $('#answer').html(html).slideUp(1000);
         //$('#answer').html(html);
       }
     });
@@ -98,27 +96,19 @@ $(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
       // Функция если все прошло успешно
       success: function(html){
        $("input[type=text], textarea").val("");
-        $('#answer').html(html).slideUp(5000);
+        $('#answer').html(html).slideUp(1000);
+        //$('#answe').location.reload();
+        
         //$('#answer2').html(html);
       }
     });
 
     // Чтобы по Submit больше ничего не выполнялось - делаем возврат false чтобы прервать цепчку срабатывания остальных функций
     return false; 
-  }
+  } 
 
-//typed	
-  /*var typed = new Typed(".hero-typed-text", {
-    	strings: [
-    	"низкие цены.",
-    	 "самые оптимальные сроки разработки.",
-    	 "чистый код и адаптивная верстка.",
-    	 "2 месяца бесплатной техподдержки."
-    	 ],
-    	typeSpeed: 80,
-    	backSpeed: 40,
-    	loop: true
-  });	*/
+  // maskedinput 
+//$(".contact-form__input-phone--maskedinput").mask("8(999)999-99-99");
 
 //slide2id - плавная прокрутка по ссылкам внутри страницы
   $("nav a,a[href='#top'],a[rel='m_PageScroll2id'],a.PageScroll2id").mPageScroll2id({
@@ -206,6 +196,7 @@ var navBlockOpen = 'navigation__list--open';
 var navBlockOpenLogo = 'logo--mobile-open';
 var iconNavOpen = 'fa-bars';
 var iconNavClose = 'fa-times';
+var blockHidden = $('.overflow-hidden');
 
 navToggleButton.on('click', function(e){
   e.preventDefault();
@@ -218,10 +209,13 @@ navToggleButton.on('click', function(e){
     navToggleIcon.removeClass(iconNavOpen);
     navToggleIcon.addClass(iconNavClose);
     navBlockLogo.addClass(navBlockOpenLogo);
+    blockHidden.css('overflow','hidden');
+
   }else{
     navToggleIcon.addClass(iconNavOpen);
     navToggleIcon.removeClass(iconNavClose);
     navBlockLogo.removeClass(navBlockOpenLogo);
+    blockHidden.css('overflow','visible');
   }
 })
  navLink.on('click', function(){
@@ -232,9 +226,11 @@ navToggleButton.on('click', function(e){
   if(navToggleIcon.hasClass(iconNavOpen) ){
     navToggleIcon.removeClass(iconNavOpen);
     navToggleIcon.addClass(iconNavClose);
+    blockHidden.css('overflow','hidden');
   }else{
     navToggleIcon.addClass(iconNavOpen);
     navToggleIcon.removeClass(iconNavClose);
+    blockHidden.css('overflow','visible');
   }
 })
 
@@ -245,9 +241,11 @@ navBlockLogo.on('click', function(){
   if(navToggleIcon.hasClass(iconNavOpen) ){
     navToggleIcon.removeClass(iconNavOpen);
     navToggleIcon.addClass(iconNavClose);
+    blockHidden.css('overflow','hidden');
   }else{
     navToggleIcon.addClass(iconNavOpen);
     navToggleIcon.removeClass(iconNavClose);
+    blockHidden.css('overflow','visible');
   }
 })
 
@@ -355,6 +353,19 @@ $(function (){
 $(".galeryWrok a").fancybox({
   minWidth: 5000
 });
+
+//typed 
+  var typed = new Typed(".hero-typed-text", {
+      strings: [
+      "низкие цены.",
+       "самые оптимальные сроки разработки.",
+       "чистый код и адаптивная верстка.",
+       "2 месяца бесплатной техподдержки."
+       ],
+      typeSpeed: 80,
+      backSpeed: 40,
+      loop: true
+  });
 
 
 });

@@ -16,17 +16,22 @@
 	opacity: .5;
 }
 .blockText{
-	height: 80%;
+	height: 75%;
 	position: absolute;
-	top: 25px;
+	top: 4px;
 	left: 25px;
 	right: 25px;
 	bottom: 25px;
 	z-index: 0;
 	
 	@media only screen and (min-width : 480px) {
-		width: 300/@em;
-		height: 200/@em;
+		width: 300px;
+		height: 200px;
+	}
+
+	@media only screen and (min-width : 768px) {
+		height: 80%;
+		top: 10px;
 	}
 }
 .hover-text{
@@ -45,11 +50,11 @@
 	}
 }
 .hover-desc{
-	font-size: 70/@em;
+	font-size: 22px;
 	font-weight: bold;
 	text-align: center;
-	padding-top: 15/@em;
-	margin-bottom: 15/@em;
+	padding-top: 40px;
+	margin-bottom: 15px;
 	
 	&:hover{
 		border-bottom: none;
@@ -59,16 +64,16 @@
 	}
 	}
 	
-	@media only screen and (min-width : 480px) {font-size: 22/@em;}
+	@media only screen and (min-width : 480px) {font-size: 22px; padding-top: 15px;}
 }
 
 .hover-text p{
 	position: absolute;
-	top: 380px;
+	top: 110px;
 	border-left: 4px solid @portfolio;
 	padding-left: 5/@em;
 	text-align: left;
-	font-size: 60px;
+	font-size: 18px;
 	margin: 0;
 	margin-top: 20px;
 	margin-left: -10px;
@@ -77,18 +82,24 @@
 		top: 100px;
 		font-size: inherit;
 	}
+
+	@media only screen and (min-width : 768px) {
+		//top: 0;
+		font-size: 20px;
+	}
 }
 
 .viewing a{
-	font-size: 70px;
+	font-size: 20px;
 	color: #fff;
 	position: absolute;
-	top: 50px;
+	top: 25px;
 	left: 50%;
     transform: translate(-50%, -50%);
 	z-index: 10;
 	 
 	@media only screen and (min-width : 480px) {
+		top: 50px;
 		margin-top: 30px;
 		font-size: 20px;
 		
@@ -122,9 +133,7 @@
 }
 
 .portfolio-item__title{
-	font-size: 50/@em;
-	padding-top: 5px;
-	padding-bottom: 5/@em;
+	font-size: 50px;
 	letter-spacing: 1px;
 	
 	@media only screen and (min-width : 480px) {font-size: 25/@em;}

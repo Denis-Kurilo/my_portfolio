@@ -3,14 +3,22 @@
 	box-shadow: 0px 3px 50px 0px rgba(0,0,0, 0.9);
 }
 .wrap-contacts{
-	width: 1110px;
+	width: 100%;
 	margin-top: 70px; 
 	margin-right: auto;
 	margin-left: auto;
+	
+	@media only screen and (min-width : 768px) {
+		width: 1110px;
+	} 
 }
 
 .contact__info{
-	padding: 30px;
+	padding: 0;
+	
+	@media only screen and (min-width : 768px) {
+		padding: 30px
+	} 
 
 	i{
 	    margin-top: 4px;
@@ -28,7 +36,7 @@
 
 	.phone, .email, .tg{
 		color: #fff;
-		font-size: 40px;
+		font-size: 21px;
 		font-weight: bold;
 		border: none;
 		margin-bottom: 30px;
@@ -38,7 +46,7 @@
 }
 
 .social i{
-	font-size: 60px;
+	font-size: 35px;
 	
 	@media only screen and (min-width : 768px) {
    	 	font-size: 30px;

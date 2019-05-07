@@ -1,18 +1,29 @@
 .services{
 	position: relative;
-	width: 1170px;
+	width: 100%;
 	margin-left: auto;
-	margin-right: auto;
+	margin-right: auto; 
+	
+	@media only screen and (min-width : 768px) {
+		width: 1170px;
+	}
 }
 .wrapper-services{
 	display: flex;
+	justify-content: center;
 	width: 100%;
-	height: 450/@em;
+	height: 335px;
 	margin-top: 70/@em;
 	margin-bottom: 50/@em;
+	
+	@media only screen and (min-width : 768px) {
+		height: 450px;
+		justify-content: start;
+	}
 }
 
 .bl-center{
+	display: none;
 	width: 40%;
 	background-image: url("../img/foto/services.jpg");
 	background-repeat: no-repeat;
@@ -20,6 +31,21 @@
     border: 2px	solid @line-title;
     border-radius: 50%;
     
+    @media only screen and (min-width : 768px) {
+		display: block;
+	}  
+}
+
+.lineCenter::before{
+	display: block;
+	content: "";
+	width: 3px;
+	height: 100%;
+	background-color: #581E1B;
+	
+	 @media only screen and (min-width : 768px) {
+		display: none;
+	} 
 }
 
 .bl-left, .bl-right{
@@ -34,18 +60,23 @@
 	display: flex;
     align-items: center;
 	width: 80%;
-	height: 100/@em;
+	height: 100px;
 	position: relative;
 	font-family: 'Roboto Slab', serif;
 	font-weight: bold;
 }
 
 .servR{
-	margin-left: 17%;
-	font-size: 30/@em;
+	margin-left: 22%;
+	font-size: 12px;
+	padding-left: 10px;
+	
+	@media only screen and (min-width : 480px) {
+		font-size: 16px;
+	}
 	
 	@media only screen and (min-width : 768px) {
-		font-size: 20/@em;
+		font-size: 20px;
 		margin-left: 20%;
 	}
 }
@@ -54,10 +85,15 @@
 	justify-content: 
 	flex-end; 
 	text-align: right;
-	font-size: 30/@em;
+	font-size: 12px;
+	padding-right: 10px;
+	
+	@media only screen and (min-width : 480px) {
+		font-size: 16px;
+	}
 	
 	@media only screen and (min-width : 768px) {
-		font-size: 20/@em;
+		font-size: 20px;
 	}
 }
 
@@ -89,13 +125,13 @@
 }
 
 .card__img{
-	width: 100%;
-	height: 100%;
 	img{
+		width: 100%;
+		height: 100%;
 	    margin-left: auto;
     	margin-right: auto;
     	
-    	@media only screen and (min-width : 768px) {
+    	@media only screen and (min-width : 360px) {
 			width: 262px;
 			height: 207px;
 		}
@@ -108,11 +144,11 @@
 	left: 50%;
 	transform: translate(-50%, -30%);
 	color: #FFF;
-	font-size: 40/@em;
+	font-size: 24px;
 	font-weight: bold;
 	text-align: center;
 	
-	@media only screen and (min-width : 768px) {font-size: 23/@em;}
+	@media only screen and (min-width : 768px) {font-size: 23px;}
 }
 
 .card{

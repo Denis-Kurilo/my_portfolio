@@ -1,6 +1,12 @@
 #order.mfp-hide
 	.decor-form
 	form(id="order-forms" class="contact-form")
+		// Hidden Required Fields
+		input(type='hidden', name='project_name', value='Мой персональный сайт')
+		input(type='hidden', name='admin_from', value='admin@student2018.zzz.com.ua')
+		input(type='hidden', name='admin_email', value='kdb2015@mail.ru')
+		input(type='hidden', name='form_subject', value='Сообщение с сайта')
+		//Hidden Required Fields
 		h4.form__title 
 			<i class="far fa-hand-point-right animated infinite wobble"></i>Вы решили заказать сайт? Заполните форму.
 		.wrap-inputText
@@ -33,7 +39,7 @@
 				label.contact-form__radio-title Сроки на разработку
 					
 				input(type="radio" value="Нужно срочно" class="contact-form__radio" id="period" name="Deadline") 
-				label(class="contact-form__radio-size" for="period") Нужно срочно
+				label(class="contact-form__radio-size" for="period") Нужно срочно#[br]
 				
 				input(type="radio" value="Нет" class="contact-form__radio" id="period2" name="Deadline") 
 				label(class="contact-form__radio-size" for="period2") Я не спешу
@@ -45,16 +51,15 @@
 				
 				input(type="radio" value="Нет" class="contact-form__radio" id="tz2" name="Technical-specifications") 
 				label(class="contact-form__radio-size" for="tz2") Нет
-		label.mt-30(for="textarea" class="contact-form__textA-desc") Описание проекта, требованя, особые пожелания, бюджет 
+		label(for="textarea" class="contact-form__textA-desc") Описание проекта, требованя, особые пожелания, бюджет 
 			span.star *
 		textarea(class="contact-form__textA" name="message" id="textarea" placeholder="Задайте вопрос?")
 		label.text-check.text-check--style Вы подтверждаете обработку данных
 			input(class="contact-form__input-checkbox contact-form__input-checkbox--style" name="checkbox" type="checkbox" id="checkbox" placeholder="Введите номер телефона")
 
-		
 		.wrap-btn
 			input(type="submit" class="btn" value="Отправить")
-	#answer2
+	#answer
 
 
 				

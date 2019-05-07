@@ -1,55 +1,59 @@
 // fonts
-// @import "../fonts/barkentina/barkentina.css";
-// @import "../fonts/icomoon/demo-files/demo.css"; 
+//@import "../../src/fonts/barkentina/barkentina.css";
+//@import "../src/fonts/icomoon/demo-files/demo.css"; 
 
-/* 
-font-family: 'Roboto', sans-serif;
-font-family: 'Roboto Slab', serif;
- */
+// font-family: 'Roboto', sans-serif;
+// font-family: 'Roboto Slab', serif;
 * {
-	-webkit-box-sizing: border-box;
-	   -moz-box-sizing: border-box;
-	        box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 html, body {
-	font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
     line-height: 1.4;
     min-width: 320px; 
-    min-width: 1170px;
     height: 100%;
+    
+    @media only screen and (min-width : 768px) {
+        min-width: 1170px;
+    }
 }
+/*  .overflow-hidden{
+   overflow: visible;
+}  */
 
-/* fix for top margin collapsing and vertical scroll prevent for body tag, when body height = 100% */
+
 body::before {
-	content: "";
-	display: block;
-	width: 1px;
-	height: 1px;
-	background-color: transparent;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
 }
 input, textarea {
-	font-family: 'Open Sans', sans-serif;
-	font-size: 16px;
-	line-height: 1.5;
-	resize: vertical;
+    //font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	margin: 0;
-	font-weight: 400;
-	line-height: 1.3;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.3;
 }
 
 img {
-	display: block;
+    display: block;
 }
 
 a {
-	color: #037EC6;
+    color: #037EC6;
 }
 
 code, pre {
@@ -120,20 +124,20 @@ blockquote p {
 }
 
 .container--left {
-	margin-left: 0;
-	margin-right: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .section-ui {
-	padding: 15px 0px;
+    padding: 15px 0px;
 }
 
 .section-ui pre {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .hr-line {
-	border-bottom: 1px solid #e9eff3;
+    border-bottom: 1px solid #e9eff3;
 }
 
 
@@ -141,13 +145,3 @@ blockquote p {
     padding-top: 70px;
     padding-bottom: 120px;
 }
-
-/* Remove mobile support */
-
-// .container {
-//     max-width: 1170px;
-// 	min-width: 100%;
-// }
-/* // Remove mobile support */
-
-

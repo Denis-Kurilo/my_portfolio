@@ -1,5 +1,5 @@
 .wrap-brn{
-	width: 60%;
+	width: 80%;
 	text-align: center;
 	position: absolute;
 	position: absolute;
@@ -8,7 +8,7 @@
     transform: translateX(-50%);
     z-index: -1;
     
-    @media only screen and (min-width : 480px) {width: 50%;}
+    @media only screen and (min-width : 480px) {width: 70%;}
     
 	@media only screen and (min-width : 768px) {
 		width: auto;
@@ -23,22 +23,29 @@
 	border-radius: 10/@em;
 	box-shadow: 0px 0px 35px 0px rgba(255, 255, 255, 0.4);
 	
+	@media only screen and (min-width : 480px) {width: 345px;}
+	@media only screen and (min-width : 768px) {width: 100%;}
+	
 	a{
 		display: block;
 		color: #FFF;
-		padding: 20px 40px;
+		padding: 10px 10px;
 		text-decoration: none;
-		font-size: 60/@em;
+		//font-size: 60px;
+		font-size: 22px;
 		letter-spacing: 1px;
 		.transition(0.3s);
 		font-family: 'Roboto Slab', serif;
 		
-		@media only screen and (min-width : 480px) {font-size: 45/@em;}
+		@media only screen and (min-width : 480px) {font-size: 27px;}
 		
-		@media only screen and (min-width : 768px) {font-size: 25/@em;}
+		@media only screen and (min-width : 768px) {
+			font-size: 30px;
+			padding: 20px 20px;
+		}
 		
 		&:hover, &focus{
-			border-radius: 5/@em;
+			border-radius: 5px;
 			color: @button-header;
 			background-color: #FFF;
 			outline: none;
@@ -50,9 +57,8 @@
 	width: 100%;
 	
 	.btn{
-		font-size: 30px;
-		
-		@media only screen and (min-width : 768px) {font-size: 25px;}
+		font-size: 17px;
+		@media only screen and (min-width : 480px) {font-size: 25px;}
 	}
 }
 .button-pholio{
@@ -70,12 +76,12 @@
         border-radius: 10px;
 		color: #fff;
 		text-decoration: none;
-		font-size: 60px;
+		font-size: 20px;
 		.transition(0.3s);
 		font-family: 'Roboto Slab', serif;
 	
 		@media only screen and (min-width : 480px) {
-			font-size: 50px;
+			//font-size: 50px;
 		}
 
 		@media screen and (min-width:768px){
@@ -100,11 +106,15 @@
 	display: inline-block;
 	margin-top: 40px;
 	a{
-		font-size: 18px;
+		font-size: 15px;
 		font-weight: bold;
 		color: #000;
 		text-decoration: none;
 		padding-bottom: 2px;
+		
+		@media screen and (min-width:768px){
+			font-size: 18px;
+		}
 		
 		&::after{
 			content: "";
